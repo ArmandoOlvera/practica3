@@ -1,11 +1,12 @@
 <?php
 	include 'basededatos.php';
 
-$id = $_POST["id"];
-	$nombre    = $_POST['nombre'];
+	$id1    = $_POST['id1'];
+$id2    = $_POST['id2'];
 
-	$sql = "INSERT INTO profesor (id_area, nombre) VALUES ($id,'$nombre')";
-
+	$sql = "INSERT INTO incompatible (id_asignatura1,id_asignatura2)
+	VALUES ($id1,$id2)";
+echo "$sql";
 	if ($conn->query($sql) === TRUE) {
 		echo "Registro Insertado de Manera Exitosa"."\n";
 	} else {

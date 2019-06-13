@@ -8,7 +8,7 @@
 
 	
 	
-	$sql = "SELECT * FROM profesor";
+	$sql = "SELECT DISTINCT * from asignatura_igual";
 
 	$result = $conn->query($sql);
 
@@ -16,7 +16,7 @@
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
 			//echo "id: " . $row["id"]. " - Name: " . $row["nombre"]. " " . $row["apellidop"]. " " . $row["apellidom"]. "\n";
-			echo $row["id_profesor"].",".$row["id_area"].",".$row["nombre"]."\n";
+			echo $row["id_asignatura1"].",".$row["id_asignatura2"]."\n";
 		}
 	} else {
 		echo "0 results";

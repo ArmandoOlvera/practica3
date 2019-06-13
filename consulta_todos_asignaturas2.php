@@ -1,4 +1,4 @@
-<?php
+2<?php
 	include 'basededatos.php';	
 
 	$usuario    = $_POST['usuario']; 
@@ -8,7 +8,7 @@
 
 	
 	
-	$sql = "SELECT * FROM asignaturas where id_area=".$usuario;
+	$sql = "SELECT id_asignatura, nombre FROM asignaturas where id_area=".$usuario;
 
 	$result = $conn->query($sql);
 
